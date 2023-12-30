@@ -95,13 +95,7 @@ package org.mfon.section5;
  * NOTE: Do not add a main method to the solution code.
  */
 public class SpeedConverter {
-    public static void main(String[] args) {
-        //System.out.println(toMilesPerHour(908710.25));
 
-
-        printConversion(95.75);
-
-    }
 
     /**
      * Speed Converter
@@ -117,7 +111,7 @@ public class SpeedConverter {
      * @param kilometersPerHour is the parameter
      * @return -1 if kilometersPerHour is negative. Otherwise it returns the miles per hour
      */
-    private static Long toMilesPerHour(double kilometersPerHour) {
+    public static Long toMilesPerHour(double kilometersPerHour) {
         // 1 mile/hour -> 1.609 km/hour
         // x           -> kilometersPerHour
         // x = kilometersPErHour / 1.609
