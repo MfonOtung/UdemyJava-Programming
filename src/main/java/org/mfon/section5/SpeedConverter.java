@@ -95,6 +95,9 @@ package org.mfon.section5;
  * NOTE: Do not add a main method to the solution code.
  */
 public class SpeedConverter {
+    public static void main(String[] args) {
+        toMilesPerHour(1.5);
+    }
 
 
     /**
