@@ -35,21 +35,15 @@ package org.mfon.section5;
 
  public class BarkingDog {
     public static void main(String[] args) {
-        shouldWakeUp(true, 7);
+        System.out.println(shouldWakeUp(true, 7));
+
 
     }
 
     public static boolean shouldWakeUp(boolean barking, int  hourOfDay) {
-        if (((hourOfDay >= 0 && hourOfDay < 8) || (hourOfDay > 22 && hourOfDay <= 23)) && (barking == true)){
+        if ((hourOfDay >= 0 && (hourOfDay < 8 || hourOfDay == 23)) && (barking == true)){
             return true;
-        } else if (((hourOfDay >= 0 && hourOfDay < 8) || (hourOfDay > 22 && hourOfDay <= 23)) && (barking == false)){
-            return false;
-        } else if ((hourOfDay < 0 && hourOfDay > 23) && (barking == true)){
-            return false;
-        } else if ((hourOfDay < 0 && hourOfDay > 23) && (barking == false)){
-            return true;
-        } else {
-            return false;
         }
+        return false;
     }
 }
