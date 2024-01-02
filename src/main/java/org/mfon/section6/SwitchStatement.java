@@ -32,6 +32,8 @@ public class SwitchStatement {
         System.out.println(month2 + " is in the " + getQuarter(month2) + " quarter");
         System.out.println(month3 + " is in the " + getQuarter(month3) + " quarter");
         System.out.println(month4 + " is in the " + getQuarter(month4) + " quarter");
+
+
     }
 
     public static String getQuarter(String month) {
