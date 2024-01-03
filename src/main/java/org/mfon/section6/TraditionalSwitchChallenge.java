@@ -1,5 +1,15 @@
 package org.mfon.section6;
 
+/**
+ 1. Create a method called printDayOfWeek, that takes an int parameter called day, but doesn't return any values.
+
+ Use the enhanced switch statement, to return the name of the day, based on the parameter passed to the switch statement, so that 0 will return "Sunday", 1 will return "Monday" and so on. Any number not between o and 6, should return "Invalid Day",
+
+ Use the enhanced switch statement as an expression, returning the result to a String named dayOfTheWeek.
+
+ 2. In the main method, call this method for the values 0 through 7.
+ 3. Bonus: Create a second method called printWeekDay, that uses an if then else statement, instead of a switch, to produce the same output.
+ */
 public class TraditionalSwitchChallenge {
     public static void main(String[] args) {
         //Translate letters "A - E" into NATO's keyword representing the letters
@@ -26,20 +36,21 @@ public class TraditionalSwitchChallenge {
 //        }
         printDayOfWeek(4);
         System.out.println(dayOfWeek(4));
-        System.out.println(printWeekDay(4));
+        printWeekDay(4);
     }
 
     public static void printDayOfWeek(int day) {
-        switch (day){
-            case 0 -> System.out.println("Day of the week is Sunday");
-            case 1 -> System.out.println("Day of the week is Monday");
-            case 2 -> System.out.println("Day of the week is Tuesday");
-            case 3 -> System.out.println("Day of the week is Wednesday");
-            case 4 -> System.out.println("Day of the week is Thursday");
-            case 5 -> System.out.println("Day of the week is Friday");
-            case 6 -> System.out.println("Day of the week is Saturday");
-            default -> System.out.println("Invalid Day");
-        }
+        String dayOfWeek = switch (day){
+            case 0 -> { yield "Sunday"; }
+            case 1 -> "Monday";
+            case 2 -> "Tuesday";
+            case 3 -> "Wednesday";
+            case 4 -> "Thursday";
+            case 5 -> "Friday";
+            case 6 -> "Saturday";
+            default -> "Invalid Day";
+        };
+        System.out.println(day + " stands for " + dayOfWeek);
     }
 
     public static String dayOfWeek(int day) {
@@ -58,23 +69,23 @@ public class TraditionalSwitchChallenge {
         };
     }
 
-    public static String printWeekDay(int day) {
+    public static void printWeekDay(int day) {
+        String dayOfWeek = "Invalid Day";
         if (day == 0){
-            return "Day of the Week is Sunday";
+            dayOfWeek = "Sunday";
         } else if (day == 1){
-            return "Day of the Week is Monday";
+            dayOfWeek = "Monday";
         } else if (day == 2){
-            return "Day of the Week is Tuesday";
+            dayOfWeek = "Tuesday";
         } else if (day == 3){
-            return "Day of the Week is Wednesday";
+            dayOfWeek = "Wednesday";
         } else if (day == 4){
-            return "Day of the Week is Thursday";
+            dayOfWeek = "Thursday";
         } else if (day == 5){
-            return "Day of the Week is Friday";
+            dayOfWeek = "Friday";
         } else if (day == 6){
-            return "Day of the Week is Saturday";
-        }else {
-            return "Invalid Day";
+            dayOfWeek = "Saturday";
         }
+        System.out.println(day + " stands for " + dayOfWeek);
     }
 }
