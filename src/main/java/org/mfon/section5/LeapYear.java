@@ -64,9 +64,7 @@ public class LeapYear {
             }else{
                 return true;
             }
-
         }
-
         return false;
     }
 }
