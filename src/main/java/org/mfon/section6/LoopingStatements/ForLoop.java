@@ -31,20 +31,18 @@ public class ForLoop {
 //        System.out.println("17 is " + (isPrime(17) ? "" : "NOT ") + " a prime number");
 
         int count = 0;
-        for (int i = 10; count < 3 && i < 50; i++){
-            if (isPrime(i)){
+        for (int i = 10; count < 3 && i < 50; i++) {
+            if (isPrime(i)) {
                 System.out.println("number " + i + " is a prime number");
                 count++;
                 /**if (count == 3){
-                    System.out.println("Found 3 - Exiting for loop");
-                    break;*/
-                }
+                 System.out.println("Found 3 - Exiting for loop");
+                 break;
+                 }*/
             }
         }
         //System.out.println("Total number of prime numbers between 10 and 50 is " + count);
-
-
-
+    }
 
     public static double calculateInterest(double amount, double interestRate) {
         return (amount * (interestRate / 100));
