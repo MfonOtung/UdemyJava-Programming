@@ -1,4 +1,4 @@
-package org.mfon.section6;
+package org.mfon.section6.LoopingStatements.WhileLoop;
 
 public class WhileLoop {
     public static void main(String[] args) {

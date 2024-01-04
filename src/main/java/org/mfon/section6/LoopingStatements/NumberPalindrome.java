@@ -40,22 +40,18 @@ package org.mfon.section6.LoopingStatements;
  NOTE: The method isPalindrome needs to be defined as public static like we have been doing
  */
 
-public class NumberPallindrome {
+public class NumberPalindrome {
     public static void main(String[] args) {
-        isPallindrome(121);
-
-
+        System.out.println(isPalindrome(120));
     }
-
-    public static boolean isPallindrome(int number) {
-        int givenNumber = number;
-        int remainder = givenNumber % 10;
+    public static boolean isPalindrome(int number) {
         int reverse = 0;
+        int original = number;
 
-        while (givenNumber != 0){
-            reverse = (reverse * 10) + remainder;
-            int newNumber = givenNumber / 10;
+        while (original != 0){
+            reverse = (reverse * 10) + original % 10;
+            original /= 10;
         }
-            return reverse == givenNumber;
+        return reverse == number;
     }
 }
