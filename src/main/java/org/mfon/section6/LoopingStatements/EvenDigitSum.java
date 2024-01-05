@@ -18,53 +18,32 @@ package org.mfon.section6.LoopingStatements;
 
 public class EvenDigitSum {
     public static void main(String[] args) {
-        getEvenDigitSum(252);
+        System.out.println(getEvenDigitSum(252));
     }
 
     public static int getEvenDigitSum(int number) {
 
-        // declare variables
-        int lastDigit = 0;
-        int evenDigitSum = 0;
-
-        // loop to repeat the process
-        while(number > 9) {
-
-            // find last digit
-            lastDigit = number%10;
-
-            // check last digit even?
-            if(lastDigit % 2 == 0)
-                // add it to sum
-                evenDigitSum += lastDigit;
+        if (number < 0) {
+            return -1;
         }
 
-        // remove last digit of number
-            number = number / 10;
+        int sum = 0;
+        for (int i = number; i > 0; i /= 10) {
+            int lastDigit = i % 10;
+            if (lastDigit % 2 == 0) {
+                sum += lastDigit;
+            }
+        }
 
-        // return sum value
-        return evenDigitSum;
+        // == alternative using while loop ==
+        // while (number > 0) {
+        //     int lastDigit = number % 10;
+        //     if (lastDigit % 2 == 0) {
+        //         sum += lastDigit;
+        //     }
+        //     number /= 10;
+        // }
+
+        return sum;
     }
-
-
-
-
-
-//        if (number < 0) {
-//            return -1;
-//        }
-//        int  evenSum = 0;
-//        while (number> 9){
-////            if (evenSum % 2 == 1){
-////                return 0;
-////            }
-//            evenSum += (number % 10);
-//            number = (number / 10);
-//            if ((number % 10) % 2 == 0 && number % 2 == 0){
-//                evenSum += number;
-//            }
-//        }
-//
-//        return  evenSum;
-
 }
