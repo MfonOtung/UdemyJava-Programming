@@ -21,12 +21,21 @@ public class EvenDigitSum {
         System.out.println(getEvenDigitSum(252));
     }
 
+<<<<<<< HEAD
     public static int getEvenDigitSum(int number) {
 
         if (number < 0) {
             return -1;
         }
 
+=======
+   public static int getEvenDigitSum(int number) {
+        
+        if (number < 0) {
+            return -1;
+        }
+ 
+>>>>>>> 32ae88279ffc930f66153cdd828461b2832483f3
         int sum = 0;
         for (int i = number; i > 0; i /= 10) {
             int lastDigit = i % 10;
@@ -34,7 +43,11 @@ public class EvenDigitSum {
                 sum += lastDigit;
             }
         }
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 32ae88279ffc930f66153cdd828461b2832483f3
         // == alternative using while loop ==
         // while (number > 0) {
         //     int lastDigit = number % 10;
@@ -43,7 +56,11 @@ public class EvenDigitSum {
         //     }
         //     number /= 10;
         // }
+<<<<<<< HEAD
 
+=======
+       
+>>>>>>> 32ae88279ffc930f66153cdd828461b2832483f3
         return sum;
     }
 }
