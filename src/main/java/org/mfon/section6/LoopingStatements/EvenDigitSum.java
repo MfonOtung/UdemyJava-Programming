@@ -18,10 +18,26 @@ package org.mfon.section6.LoopingStatements;
 
 public class EvenDigitSum {
     public static void main(String[] args) {
-
+        System.out.println(getEvenDigitSum(252));
     }
 
-    public static void getEvenDigitSum(int number) {
+    public static int getEvenDigitSum(int number) {
+        if (number < 0) {
+            return -1;
+        }
+        int  evenSum = 0;
+        while (number> 9){
+//            if (evenSum % 2 == 1){
+//                return 0;
+//            }
+            evenSum += (number % 10);
+            number = (number / 10);
+            if ((number % 10) % 2 == 0 && number % 2 == 0){
+                evenSum += number;
+            }
+        }
 
+        return  evenSum;
     }
+
 }
