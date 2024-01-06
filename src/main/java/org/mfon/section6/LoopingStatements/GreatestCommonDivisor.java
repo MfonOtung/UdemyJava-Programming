@@ -29,15 +29,19 @@ package org.mfon.section6.LoopingStatements;
 
 public class GreatestCommonDivisor {
     public static void main(String[] args) {
-
+        System.out.println(getGreatestCommonDivisor(10,16));
     }
     public static int getGreatestCommonDivisor(int first, int second) {
-        if (first < 10 || second < 10){
+        if (first < 10 || second < 10) {
             return -1;
         }
-        int lowestCommonDivisor = 0;
-        int highestCommonDivisor = 0;
-
+        int minNumber = first < second? first : second;
+        int highestCommonDivisor = 1;
+        for ( int divisor = 1; divisor <= minNumber; divisor++) {
+            if ((first % divisor == 0) && (second % divisor == 0)){
+                highestCommonDivisor = divisor;
+            }
+        }
         return highestCommonDivisor;
     }
 }
