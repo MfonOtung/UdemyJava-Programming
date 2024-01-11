@@ -33,7 +33,7 @@ public class BankAccount {
 
     //Constructor: Has the same class name with the return type
     //Second Constructor:
-    public BankAccount(){/** Calling another constructor within a contsructor */
+    public BankAccount(){/** Calling another constructor(no arguments) within a contsructor */
         this("Default name", "002233441", "Default email", "Default phoneNumber", 1500.00);
         System.out.println("Empty constructor called");
     }
