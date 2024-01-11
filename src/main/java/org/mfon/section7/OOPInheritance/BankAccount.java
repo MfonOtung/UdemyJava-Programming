@@ -31,6 +31,29 @@ public class BankAccount {
     private String email;
     private String phoneNumber;
 
+    //Constructor: Has the same class name with the return type
+    //Second Constructor:
+    public BankAccount(){/** Calling another constructor within a contsructor */
+        this("Default name", "002233441", "Default email", "Default phoneNumber", 1500.00);
+        System.out.println("Empty constructor called");
+    }
+    //First Constructor:
+    public BankAccount(String name, String accountNumber, String email, String phoneNumber, double accountBalance){
+        System.out.println("Account constructor with parameters called");
+        this.accountNumber = accountNumber;
+        this.accountBalance = accountBalance;
+        this.name = name;
+        email = email;
+        phoneNumber = phoneNumber;
+    }
+    // Third Constructor: with only 3 parameters.
+    public BankAccount(String name, String email, String phoneNumber) {
+        this(name, "0022563441", email, phoneNumber, 2000.50);
+       // this.name = name;
+        //this.email = email;
+        //this.phoneNumber = phoneNumber;
+        // To call the first Contsructor  in here, we comment the 3 parameters and call the first constructor.
+    }
 
     public String getAccountNumber() {
         return accountNumber;
