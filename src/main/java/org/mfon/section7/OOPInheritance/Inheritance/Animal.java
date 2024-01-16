@@ -3,7 +3,7 @@ package org.mfon.section7.OOPInheritance.Inheritance;
 
 
 public class Animal{
-    private String type;
+    protected String type; //Modifier private changed to protected when filling in the makeNoice method of Dog
     private String size;
     private double weight;
 

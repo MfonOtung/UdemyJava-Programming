@@ -26,14 +26,44 @@ public class Dog extends Animal {
                 "} " + super.toString();
     }
 
-    public void makeNoise(){
-    }//Overriding the makeNoise method on Animal Class(super class); done when you want the child class to
+    @Override
+    public void makeNoise() {
+        if (type == "Wolf"){
+            System.out.println("Ow Woooo! ");
+        }
+        bark();
+        System.out.println();
+    }
+    //Overriding the makeNoise method on Animal Class(super class); done when you want the child class to
     // show different behaviour for that method.
+    //Test by creating a method wolf on the AnimalMain
+
 
 
     @Override
     public void move(String speed) {
         super.move(speed);
-        System.out.println("Dogs walk, run and wag their tails");
+        //System.out.println("Dogs walk, run and wag their tails");
+        if (speed == "slow"){
+            walk();
+            wagTail();
+        }else {
+            run();
+            bark();
+        }
+        System.out.println();
+    }
+//To get behaviours specific to Dog, we create specific Dog methods; then comment the sout of move override
+    private void bark(){
+        System.out.println("Woof");
+    }
+    private void run(){
+        System.out.println("DOg Running");
+    }
+    private void walk(){
+        System.out.println("Dog Walking");
+    }
+    private void wagTail(){
+        System.out.println("Tail Wagging");
     }
 }
