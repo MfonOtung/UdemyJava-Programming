@@ -1,5 +1,7 @@
 package org.mfon.section8Polymorphism.Encapsulation.EncapsulationChallengeExercise;
 
+import java.io.Serializable;
+
 /**
  Create a class named Printer.
  It's going to simulate a real computer printer, a laser printer.
@@ -35,23 +37,36 @@ public class Printer {
         System.out.printf("Current job pages: %d, Printer Total: %d %n", pagesPrinted, printer.getPagesPrinted());
     }
     private int tonerLevel;
-    private boolean duplex;
     private int pagesPrinted;
-
+    private boolean duplex;
 
     public Printer(int tonerLevel, boolean duplex) {
         this.pagesPrinted = 0;
         this.tonerLevel = (tonerLevel >= 0 && tonerLevel <= 100)? tonerLevel : -1;
         this.duplex = duplex;
     }
-    public int addToner(int tonerAmount){
-        int tempAmount = tonerAmount + tonerLevel;
-        if ( tempAmount > 100 || tempAmount < 0 ){
+//    public int addToner(int tonerAmount){
+//        int tempAmount = tonerAmount + tonerLevel;
+//        if ( tempAmount > 100 || tempAmount < 0 ){
+//            return -1;
+//        }
+//        tonerLevel += tonerAmount ;
+//        return tonerLevel;
+//    }
+
+    public int addToner(int tonerAmount) {
+
+        if (tonerAmount > 0 && tonerAmount <= 100) {
+            if (this.tonerLevel + tonerAmount > 100) {
+                return -1;
+            }
+            this.tonerLevel += tonerAmount;
+            return this.tonerLevel;
+        } else {
             return -1;
         }
-        tonerLevel += tonerAmount ;
-        return tonerLevel;
     }
+
     public int printPages(int pages){
         int jobPages = (duplex) ? (pages / 2) + (pages % 2) : pages;
         pagesPrinted += jobPages;
