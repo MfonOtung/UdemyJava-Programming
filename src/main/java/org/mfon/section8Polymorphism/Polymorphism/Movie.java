@@ -46,6 +46,9 @@ class Adventure extends Movie{
                 "Something Bad Happens");
         //The format specifier, %s is used to replace any String
     }
+    public void watchAdventure() {
+        System.out.println("Watching an Adventure!");
+    }
 }
 class Comedy extends Movie{
     public Comedy (String title) {
@@ -60,6 +63,9 @@ class Comedy extends Movie{
                 "Happy Ending");
         //The format specifier, %s is used to replace any String
     }
+    public void watchComedy() {
+        System.out.println("Watching a Comedy!");
+    }
 }
 class ScienceFiction extends Movie{
     public ScienceFiction(String title) {
@@ -73,5 +79,8 @@ class ScienceFiction extends Movie{
                 "Space Guys Chase Aliens",
                 "Planet Blows Up");
         //The format specifier, %s is used to replace any String
+    }
+    public void watchScienceFiction() {
+        System.out.println("Watching a Science Fiction Thriller!");
     }
 }
