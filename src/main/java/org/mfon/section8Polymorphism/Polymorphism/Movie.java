@@ -10,9 +10,8 @@ public class Movie {
         String instanceType = this.getClass().getSimpleName();
         System.out.println(title + " is a " + instanceType + " film");
     }
-    //he method getClass() is on Java linked object, which we've talked about.
-    //This method returns class type information about the runtime instance on which this method is executing.
-    //And from that we can get the name of the class using the getSimpleName method.
+    //The method getClass() is on Java linked object, and returns class type information about the runtime instance
+    // on which this method is executing. And from that we can get the name of the class using the getSimpleName method.
 
     public static Movie getMovie(String type, String title){
         return switch (type.toUpperCase().charAt(0)) {
