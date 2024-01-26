@@ -32,7 +32,17 @@ public class NextMain {
         var plane = new Comedy("Airplane");
         plane.watchComedy();
 
+        //How to test what the runtime type of an object really is.
+        Object unknownObject = Movie.getMovie("S", "Star Wars");
+        if (unknownObject.getClass().getSimpleName() == "Comedy") {
+            Comedy c = (Comedy) unknownObject;
+            c.watchComedy();
 
-
+        //Another way, testing if the  object coming back might be an Adventure type.
+        } else if (unknownObject instanceof Adventure) {
+            ((Adventure) unknownObject).watchAdventure();
+        } else if (unknownObject instanceof ScienceFiction syfy) {
+            syfy.watchScienceFiction();
+        }
     }
 }
