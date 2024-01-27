@@ -20,9 +20,9 @@ package org.mfon.section8Polymorphism.Polymorphism.PolymorphismChallengeExercise
  of these classes, and that executes different behavior for each instance.
  At least one method should print the type of the runtime object.
  */
-public class Car {
+public class MyCar {
     private String description;
-    public Car(String description) {
+    public MyCar(String description) {
         this.description = description;
     }
     public void startEngine() {
@@ -36,7 +36,7 @@ public class Car {
         System.out.println("Car -> runEngine");
     }
 }
-class GasPoweredCar extends Car{
+class GasPoweredMyCar extends MyCar {
     private double avgKmPerLitre;
     private int cylinders = 6;
 
@@ -49,29 +49,29 @@ class GasPoweredCar extends Car{
         System.out.printf("Gas -> usage exceeds the average: %.2f %n", avgKmPerLitre);
     }
 
-    public GasPoweredCar(String description, double avgKmPerLitre, int cylinders) {
+    public GasPoweredMyCar(String description, double avgKmPerLitre, int cylinders) {
         super(description);
         this.avgKmPerLitre = avgKmPerLitre;
         this.cylinders = cylinders;
 
     }
 }
-class ElectricCar extends Car{
+class ElectricMyCar extends MyCar {
     private double avgKmPerCharge;
     private int batterySize;
 
-    public ElectricCar(String description, double avgKmPerCharge, int batterySize) {
+    public ElectricMyCar(String description, double avgKmPerCharge, int batterySize) {
         super(description);
         this.avgKmPerCharge = avgKmPerCharge;
         this.batterySize = batterySize;
     }
 }
-class HybridCar extends Car{
+class HybridMyCar extends MyCar {
     private double avgKmPerLitre;
     private int batterySize;
     private int cylinders;
 
-    public HybridCar(String description, double avgKmPerLitre, int batterySize, int cylinders) {
+    public HybridMyCar(String description, double avgKmPerLitre, int batterySize, int cylinders) {
         super(description);
         this.avgKmPerLitre = avgKmPerLitre;
         this.batterySize = batterySize;
