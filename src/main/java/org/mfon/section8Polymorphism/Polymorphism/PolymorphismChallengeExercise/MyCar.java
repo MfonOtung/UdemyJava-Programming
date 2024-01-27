@@ -23,9 +23,11 @@ package org.mfon.section8Polymorphism.Polymorphism.PolymorphismChallengeExercise
 public class MyCar {
     private String description;
     public MyCar(String description) {
+
         this.description = description;
     }
     public void startEngine() {
+
         System.out.println("Car -> startEngine");
     }
     public void drive() {
@@ -33,6 +35,7 @@ public class MyCar {
         runEngine();
     }
     protected void runEngine() {
+
         System.out.println("Car -> runEngine");
     }
 }
@@ -42,10 +45,12 @@ class GasPoweredMyCar extends MyCar {
 
     @Override
     public void startEngine() {
+
         System.out.printf("Gas -> All %d cylinders are fired up, Ready!%n", cylinders);
     }
     @Override
     protected void runEngine() {
+
         System.out.printf("Gas -> usage exceeds the average: %.2f %n", avgKmPerLitre);
     }
 

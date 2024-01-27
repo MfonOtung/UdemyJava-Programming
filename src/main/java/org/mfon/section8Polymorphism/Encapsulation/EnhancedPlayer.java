@@ -6,7 +6,7 @@ public class EnhancedPlayer {
     private String weapon;
 
     public EnhancedPlayer(String fullName) {
-        this(fullName, 100, "Sword");;
+        this(fullName, 100, "Sword");
     }
     public EnhancedPlayer(String fullName, int health, String weapon) {
         this.fullName = fullName;
