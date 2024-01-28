@@ -83,3 +83,48 @@ class HybridMyCar extends MyCar {
         this.cylinders = cylinders;
     }
 }
+
+//2. And what we want to do next is create the other  two subclasses, ElectricCar and HybridCar.
+class ElectricCar extends MyCar {
+    private double avgKmPerCharge;
+    private int batterySize = 6;
+    @Override
+    public void startEngine() {
+        System.out.printf("BEV -> switch %d kWh battery on, Ready!%n", batterySize);
+    }
+    @Override
+    protected void runEngine() {
+        System.out.printf("BEV -> usage under the average: %.2f %n", avgKmPerCharge);
+    }
+    public ElectricCar(String description, double avgKmPerCharge, int batterySize) {
+        super(description);
+        this.avgKmPerCharge = avgKmPerCharge;
+        this.batterySize = batterySize;
+
+    }
+}
+class HybridCar extends MyCar {
+    private double avgKmPerLitre;
+    private int cylinders = 6;
+    private int batterySize;
+
+    public HybridCar(String description, int batterySize) {
+        super(description);
+        this.batterySize = batterySize;
+    }
+    @Override
+    public void startEngine() {
+        System.out.printf("Hybrid -> %d cylinders are fired up.%n", cylinders);
+        System.out.printf("Hybrid -> switch %d kWh battery on, Ready!%n", batterySize);
+    }
+    @Override
+    protected void runEngine() {
+        System.out.printf("Hybrid -> usage below average: %.2f %n", avgKmPerLitre);
+    }
+    public HybridCar(String description, double avgKmPerLitre, int cylinders, int batterySize) {
+        super(description);
+        this.avgKmPerLitre = avgKmPerLitre;
+        this.cylinders = cylinders;
+        this.batterySize = batterySize;
+    }
+}
