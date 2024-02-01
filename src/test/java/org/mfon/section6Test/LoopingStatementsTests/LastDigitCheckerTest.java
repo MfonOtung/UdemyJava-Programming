@@ -1,7 +1,7 @@
 package org.mfon.section6Test.LoopingStatementsTests;
 
 import org.junit.jupiter.api.Test;
-import org.mfon.section6.LoopingStatements.LastDigitChecker;
+import org.mfon.section6_Control_Flow.LoopingStatements.LastDigitChecker;
 
 public class LastDigitCheckerTest {
     @Test

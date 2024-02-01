@@ -1,9 +1,7 @@
 package org.mfon.section6Test.LoopingStatementsTests;
 
 import org.junit.jupiter.api.Test;
-import org.mfon.section6.LoopingStatements.GreatestCommonDivisor;
-
-import java.util.GregorianCalendar;
+import org.mfon.section6_Control_Flow.LoopingStatements.GreatestCommonDivisor;
 
 public class GreatestCommonDivisorTest {
     @Test

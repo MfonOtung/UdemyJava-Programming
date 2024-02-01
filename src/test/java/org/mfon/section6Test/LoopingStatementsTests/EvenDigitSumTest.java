@@ -1,7 +1,7 @@
 package org.mfon.section6Test.LoopingStatementsTests;
 
 import org.junit.jupiter.api.Test;
-import org.mfon.section6.LoopingStatements.EvenDigitSum;
+import org.mfon.section6_Control_Flow.LoopingStatements.EvenDigitSum;
 
 public class EvenDigitSumTest {
     @Test

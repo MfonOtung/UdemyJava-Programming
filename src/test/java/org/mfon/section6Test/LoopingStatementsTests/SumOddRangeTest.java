@@ -1,7 +1,7 @@
 package org.mfon.section6Test.LoopingStatementsTests;
 
 import org.junit.jupiter.api.Test;
-import org.mfon.section6.LoopingStatements.SumOddRange;
+import org.mfon.section6_Control_Flow.LoopingStatements.SumOddRange;
 
 public class SumOddRangeTest {
     @Test

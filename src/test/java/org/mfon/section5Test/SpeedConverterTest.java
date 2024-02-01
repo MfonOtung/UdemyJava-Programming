@@ -2,7 +2,7 @@ package org.mfon.section5Test;
 
 
 import org.junit.jupiter.api.Test;
-import org.mfon.section5.SpeedConverter;
+import org.mfon.section5_Expressions_Statements_and_More.SpeedConverter;
 
 public class SpeedConverterTest {
 
