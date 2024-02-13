@@ -20,6 +20,10 @@ public class ReverseArrayChallenge extends MinimumElementChallenge {
 
         reverse(returnedArray);
         System.out.println("Final: " + Arrays.toString(returnedArray));
+
+        int[] reversedCopy = reverseCopy(returnedArray);
+        System.out.println("After reverse " + Arrays.toString(returnedArray));
+        System.out.println("reversedCopy " + Arrays.toString(reversedCopy));
     }
     private static void reverse(int[] array){
         int maxIndex = array.length - 1;
@@ -31,7 +35,16 @@ public class ReverseArrayChallenge extends MinimumElementChallenge {
             array[maxIndex - i] = temp;
             System.out.println("--> " + Arrays.toString(array));
         }
+    }
 
+    //Without mutation method:
+    private static int[] reverseCopy(int[] array){
+        int[] reversedArray = new int[array.length];
+        int maxIndex = array.length - 1;
+        for (int el : array){
+            reversedArray[maxIndex--] = el;
+        }
+        return reversedArray;
     }
 }
 
