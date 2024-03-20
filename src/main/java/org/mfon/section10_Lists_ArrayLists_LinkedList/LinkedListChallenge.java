@@ -79,6 +79,7 @@ public class LinkedListChallenge {
         placesToVisit.addFirst(new Place("Sydney", 0));
         System.out.println(placesToVisit);
 
+        //Setting up the scanner
         var iterator = placesToVisit.listIterator();
         Scanner scanner = new Scanner(System.in);
         boolean quitLoop = false;
