@@ -1,4 +1,4 @@
-package org.mfon.section10_Lists_ArrayLists_LinkedList.CodingExercises;
+package org.mfon.section10_Lists_ArrayLists_LinkedList.CodingExercises.Exercise2;
 /*
 PLAYLIST:
 Create a program that implements a playlist of songs.

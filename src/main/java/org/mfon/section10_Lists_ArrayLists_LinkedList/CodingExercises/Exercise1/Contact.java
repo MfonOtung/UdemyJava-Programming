@@ -1,8 +1,4 @@
-package org.mfon.section10_Lists_ArrayLists_LinkedList.CodingExercises;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+package org.mfon.section10_Lists_ArrayLists_LinkedList.CodingExercises.Exercise1;
 
 public class Contact {
     private String name;

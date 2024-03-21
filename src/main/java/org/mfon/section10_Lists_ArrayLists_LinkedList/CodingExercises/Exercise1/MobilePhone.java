@@ -1,4 +1,4 @@
-package org.mfon.section10_Lists_ArrayLists_LinkedList.CodingExercises;
+package org.mfon.section10_Lists_ArrayLists_LinkedList.CodingExercises.Exercise1;
 
 /**
  Mobile Phone:
@@ -49,6 +49,8 @@ package org.mfon.section10_Lists_ArrayLists_LinkedList.CodingExercises;
  NOTE:  If you get an error from the Evaluate class, it's most likely the constructor.
  Check if you've added a constructor or if the constructor has the right arguments.
  */
+import org.mfon.section10_Lists_ArrayLists_LinkedList.CodingExercises.Exercise1.Contact;
+
 import java.util.ArrayList;
 
 public class MobilePhone {

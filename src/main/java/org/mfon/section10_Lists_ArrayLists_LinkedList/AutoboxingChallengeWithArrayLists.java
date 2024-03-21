@@ -84,7 +84,8 @@ class Bank {
             if (customer != null) {
                 customer.transactions().add(transactionAmount);
             }
-        }public void printStatement(String customerName) {
+        }
+        public void printStatement(String customerName) {
 
             Customer customer = getCustomer(customerName);
             if (customer == null) {
