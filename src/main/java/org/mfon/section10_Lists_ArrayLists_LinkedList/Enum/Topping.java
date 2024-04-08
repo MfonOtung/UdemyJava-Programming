@@ -14,5 +14,5 @@ public enum Topping {
             case CHEDDAR -> 1.0;
             default -> 0.0;
         };
-    }
+    } //This can be For Looped in the Main class
 }
