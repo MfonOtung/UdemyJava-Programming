@@ -1,5 +1,5 @@
 package org.mfon.section11_Abstraction_in_Java.Interfaces;
-enum FlightStages implements Trackable {GROUNDED, LAUNCH, CRUISE, DATA, COLLECTION;
+enum FlightStages implements Trackable {GROUNDED, LAUNCH, CRUISE, DATA_COLLECTION;
 
     @Override
     public void track() {
@@ -15,37 +15,60 @@ enum FlightStages implements Trackable {GROUNDED, LAUNCH, CRUISE, DATA, COLLECTI
 record DragonFly(String name, String type) implements FlightEnabled{
     @Override
     public void takeoff() {
-
     }
     @Override
     public void land() {
-
     }
     @Override
     public void fly() {
-
     }
 }
 class Satelite implements OrbitEarth{
+    FlightStages stage = FlightStages.GROUNDED;
     public void achieveOrbit(){
-        System.out.println("Orbit achieved!");
+//        System.out.println("Orbit achieved!");
+        transition("Orbit achieved!");
     }
     @Override
     public void takeoff() {
-
+        transition("Taking Off");
     }
     @Override
     public void land() {
-
+        transition("Landing");
     }
     @Override
     public void fly() {
-
+        achieveOrbit();
+        transition("Data Collection while Orbiting");
+    }
+    public void transition(String description){
+        System.out.println(description);
+        stage = transition(stage);
+        stage.track();
     }
 }
 
 interface OrbitEarth extends FlightEnabled{
     void achieveOrbit();
+    //static void log(String description){
+        //var today = new java.util.Date(); //Using a fully qualified name
+        //System.out.println(today + ": " + description);
+        /**this method can be made private and static, which means only methods on this interface can actually call it*/
+    private static void log(String description){
+    var today = new java.util.Date(); //Using a fully qualified name
+    System.out.println(today + ": " + description);
+    }
+    private void logStage(FlightStages stage, String description){
+        description = stage + ": " + description;
+        log(description);
+    }
+    @Override
+    default FlightStages transition(FlightStages stage) {
+        FlightStages nextStage = FlightEnabled.super.transition(stage);
+        logStage(stage, "Beginning Transition to " + nextStage);
+        return nextStage;
+    }
 }
 interface FlightEnabled{
 //    public abstract void takeoff();
