@@ -1,4 +1,4 @@
-package org.mfon.section11_Abstraction_in_Java.Coding_Exercise;
+package org.mfon.section11_Abstraction_in_Java.Coding_Exercise_Abstract;
 /**
  ABSTRACT CLASS
  Implement the following:
