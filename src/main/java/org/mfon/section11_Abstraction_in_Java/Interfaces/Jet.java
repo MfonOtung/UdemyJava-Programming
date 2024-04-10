@@ -17,4 +17,11 @@ public class Jet implements FlightEnabled, Trackable{
     public void track() {
         System.out.println(getClass().getSimpleName() + "'s coordinates recorded");
     }
+    @Override
+    public FlightStages transition(FlightStages stage){
+        //return FlightEnabled.super.transition(stage);
+        System.out.println(getClass().getSimpleName() + " transitioning");
+        //return FlightStages.CRUISE;
+        return FlightEnabled.super.transition(stage); //Whenever you call a default method from an overridden method,you need to qualify super with the interface type.//
+    }
 }
