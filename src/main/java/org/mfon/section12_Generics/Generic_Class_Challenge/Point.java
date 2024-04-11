@@ -8,7 +8,7 @@ abstract class Point implements Mappable {
 
     public Point(String location) {
         this.location = Mappable.stringToLatLon(location);
-    }
+ }
 
     @Override
     public void render() {
