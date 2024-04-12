@@ -1,10 +1,12 @@
 package org.mfon.section12_Generics.GenericsExtra.Model;
 
-import java.util.Random;
+import org.mfon.section12_Generics.GenericsExtra.Util.QueryItem;
 
 import java.util.Random;
 
-public class Student {
+import java.util.Random;
+
+public class Student implements QueryItem {
 
     private String name;
     private String course;
@@ -29,5 +31,17 @@ public class Student {
 
     public int getYearStarted() {
         return yearStarted;
+    }
+
+    @Override
+    public boolean matchFieldValue(String fieldName, String value) {
+
+        String fName = fieldName.toUpperCase();
+        return switch(fName) {
+            case "NAME" -> name.equalsIgnoreCase(value);
+            case "COURSE" -> course.equalsIgnoreCase(value);
+            case "YEARSTARTED" -> yearStarted == (Integer.parseInt(value));
+            default -> false;
+        };
     }
 }
