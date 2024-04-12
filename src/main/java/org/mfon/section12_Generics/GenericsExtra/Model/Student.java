@@ -2,6 +2,8 @@ package org.mfon.section12_Generics.GenericsExtra.Model;
 
 import java.util.Random;
 
+import java.util.Random;
+
 public class Student {
 
     private String name;
