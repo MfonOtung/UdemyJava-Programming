@@ -3,22 +3,17 @@ package org.mfon.section13_NestedClasses_And_Types.InnerClasses.BillsBurger_Chal
 import java.util.Comparator;
 
 public class StoreEmployee extends Employee {
-
     private String store;
-
     public StoreEmployee() {
     }
-
     public StoreEmployee(int employeeId, String name, int yearStarted, String store) {
         super(employeeId, name, yearStarted);
         this.store = store;
     }
-
     @Override
     public String toString() {
         return "%-8s%s".formatted(store, super.toString());
     }
-
     public class StoreComparator<T extends StoreEmployee>
             implements Comparator<StoreEmployee> {
 
@@ -30,7 +25,6 @@ public class StoreEmployee extends Employee {
                 return new Employee.EmployeeComparator<>(
                         "yearStarted").compare(o1, o2);
             }
-
             return result;
         }
     }
